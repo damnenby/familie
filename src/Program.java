@@ -24,6 +24,20 @@ public class Program {
         } catch (IllegalArgumentException e) {
             System.out.println("Fehler: " + e.getMessage());
         }
+
+        Familie f3 = new Familie(Familie.Familienmitglied.Mutter, "Sofia");
+        f3.addKind("Nico");
+        System.out.println("Vater:  " + f3.getMitglied(Familie.Familienmitglied.Vater));
+        System.out.println("Mutter: " + f3.getMitglied(Familie.Familienmitglied.Mutter));
+        System.out.println("Kinder: " + f3.getMitglied(Familie.Familienmitglied.Kinder));
+
+        for (String name : f3) {
+            System.out.println(name);
+        }
+
+        for (String name : f1) {
+            System.out.println(name);
+        }
     }
 
 
